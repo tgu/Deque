@@ -1,4 +1,4 @@
-// swift-tools-version:4.0
+// swift-tools-version:5.2
 //
 //  Package.swift
 //  Deque
@@ -12,13 +12,12 @@ import PackageDescription
 let package = Package(
     name: "Deque",
     products: [
-        .library(name: "Deque", type: .dynamic, targets: ["Deque"])
+        .library(name: "Deque", targets: ["Deque"])
     ],
     dependencies: [
     ],
     targets: [
         .target(name: "Deque", dependencies: [], path: "Sources"),
         .testTarget(name: "DequeTests", dependencies: ["Deque"], path: "Tests/DequeTests")
-    ],
-    swiftLanguageVersions: [4]
+    ]
 )
